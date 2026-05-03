@@ -26,7 +26,7 @@ class Plant:
         self._stats.age_calls += 1
 
     def show(self):
-        print(f"{self.name}: {self.height}cm, {self.age} days old")
+        print(f"{self.name}: {round(self.height, 1)}cm, {self.age} days old")
         self._stats.show_calls += 1
 
     @staticmethod
