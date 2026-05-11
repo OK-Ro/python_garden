@@ -13,41 +13,57 @@ def garden_operations(operation_number):
 
     else:
         return "Operation completed successfully"
-
+    
+            
 
 def test_error_types():
     print("=== Garden Error Types Demo ===")
 
-    print("Testing operation 0...")
-    try:
-        garden_operations(0)
-    except ValueError as e:
-        print(f"Caught ValueError: {e}")
+    for x in range(0, 5):
+        print(f"testing operation {x}")
+        try:
+            print(garden_operations(x))
+        except ValueError as e:
+            print(f"Caught ValueError: {e}")
+        except ZeroDivisionError as e:
+            print(f"Caught ZeroDivisionError: {e}")
+        except FileNotFoundError as e:
+            print(f"Caught FileNotFoundError: {e}")
+        except TypeError as e:
+            print(f"Caught TypeError: {e}")
+        except Exception as e:
+            print(f"Caught unexpected error: {e}")
 
-    print("Testing operation 1...")
-    try:
-        garden_operations(1)
-    except ZeroDivisionError as e:
-        print(f"Caught ZeroDivisionError: {e}")
+    # print("Testing operation 0...")
+    # try:
+    #     garden_operations(0)
+    # except ValueError as e:
+    #     print(f"Caught ValueError: {e}")
 
-    print("Testing operation 2...")
-    try:
-        garden_operations(2)
-    except FileNotFoundError as e:
-        print(f"Caught FileNotFoundError: {e}")
+    # print("Testing operation 1...")
+    # try:
+    #     garden_operations(1)
+    # except ZeroDivisionError as e:
+    #     print(f"Caught ZeroDivisionError: {e}")
 
-    print("Testing operation 3...")
-    try:
-        garden_operations(3)
-    except TypeError as e:
-        print(f"Caught TypeError: {e}")
+    # print("Testing operation 2...")
+    # try:
+    #     garden_operations(2)
+    # except FileNotFoundError as e:
+    #     print(f"Caught FileNotFoundError: {e}")
 
-    print("Testing operation 4...")
-    try:
-        print(garden_operations(4))
-    except Exception as e:
-        print(f"Caught unexpected error: {e}")
-    print()
+    # print("Testing operation 3...")
+    # try:
+    #     garden_operations(3)
+    # except TypeError as e:
+    #     print(f"Caught TypeError: {e}")
+
+    # print("Testing operation 4...")
+    # try:
+    #     print(garden_operations(4))
+    # except Exception as e:
+    #     print(f"Caught unexpected error: {e}")
+    # print()
 
     print("All error types tested successfully!")
 
